@@ -20,9 +20,9 @@ class IndexController extends Controller
       $fecha2 = $request->fecha2;
       $fecha3 = $request->fecha3;
       $fecha4 = $request->fecha4;
-  //    $mensaje = $fechas->comprobarFechas(2,1,5,6);
+      $mensaje = $fechas->comprobarFechas($fecha1,$fecha2,$fecha3,$fecha4);
 
-      return $fecha3;
+      return $mensaje;
 
     }
 
