@@ -14,3 +14,4 @@
 Route::get('/', 'IndexController@index');
 
 Route::post('/fechas', 'IndexController@postFechas')->name('fechas.post');
+Route::post('/calcular', 'IndexController@calcular')->name('fechas.calcular');
