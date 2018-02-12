@@ -18,13 +18,20 @@ function calcularFecha(valor , fecha){
       });
 }
 
-function validacion(){
-
-  $('#fila').empty();
-  $('#fila').append(
-    "<div class='col-md-7'>"+
-      "<div class='alert alert-danger'><i class='fas fa-times'></i> Campo vacio  </div>"+
-    "</div>");
+function validacion(valor){
+  var bandera;
+  if(valor <= 0){
+//    bandera=false;
+    $('#fila').empty();
+    $('#fila').append(
+      "<div class='col-md-7'>"+
+        "<div class='alert alert-danger'><i class='fas fa-times'></i> Campo vacio. Porfavor verificar. </div>"+
+      "</div>");
+  }else{
+    $('#fila').empty();
+    bandera=true;
+  }
+  return bandera;
 }
 
 $(document).ready(function() {
@@ -76,11 +83,8 @@ $(document).ready(function() {
         event.preventDefault();
         var fecha1 = $("#datepicker1").val();
         var valor1 = $('#valor1').val();
-        if (valor1.length <= 0) {
-            validacion();
-        }else{
-            $('#fila').empty();
-            calcularFecha(valor1,fecha1);
+        if(validacion(valor1.length) == true){
+          calcularFecha(valor1,fecha1);
         }
     });
 
@@ -88,12 +92,10 @@ $(document).ready(function() {
         event.preventDefault();
         var fecha2 =   $( "#datepicker2 " ).val();
         var valor2 = $('#valor2').val();
-        if (valor2.length <= 0) {
-            validacion();
-        }else{
-            $('#fila').empty();
-            calcularFecha(valor2 , fecha2);
+        if(validacion(valor2.length) == true){
+          calcularFecha(valor2,fecha2);
         }
+
 
     });
 
@@ -101,13 +103,10 @@ $(document).ready(function() {
         event.preventDefault();
         var fecha3 = $( "#datepicker3").val();
         var valor3 = $('#valor3').val();
-        if (valor3.length <= 0) {
-            validacion();
-        }else{
-            $('#fila').empty();
-            calcularFecha(valor3 , fecha3);
-        }
 
+        if(validacion(valor3.length) == true){
+          calcularFecha(valor3,fecha3);
+        }
 
     });
 
@@ -115,11 +114,8 @@ $(document).ready(function() {
         event.preventDefault();
         var fecha4 = $( "#datepicker4").val();
         var valor4 = $('#valor4').val();
-        if (valor4.length <= 0) {
-            validacion();
-        }else{
-            $('#fila').empty();
-            calcularFecha(valor4,fecha4);
+        if(validacion(valor4.length) == true){
+          calcularFecha(valor4,fecha4);
         }
 
     });
