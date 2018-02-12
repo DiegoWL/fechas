@@ -28,19 +28,25 @@ class IndexController extends Controller
 
     public function calcular(Request $request){
 
-      $fechas = new FechasController();
+        $fechas = new FechasController();
+      $n = $request->valor;
+      $f = $request->fecha;
+      // $fecha1 = $request->fecha1;
+      // $fecha2 = $request->fecha2;
+      // $fecha3 = $request->fecha3;
+      // $fecha4 = $request->fecha4;
+      // $n1 = $request->valor1;
+      // $n2 = $request->valor2;
+      // $n3 = $request->valor3;
+      // $n4 = $request->valor4;
+      $nueva_f = $fechas->calcularFechas($f , $n);
 
-      $fecha1 = $request->fecha1;
-      $fecha2 = $request->fecha2;
-      $fecha3 = $request->fecha3;
-      $fecha4 = $request->fecha4;
-      $n1 = $request->valor1;
-      $n2 = $request->valor2;
-      $n3 = $request->valor3;
-      $n4 = $request->valor4;
-      $m = $fechas->calcularFechas($fecha1 , $n1);
+      return  response()->json([
+        'view'=>view('modal' ,
+        ['nueva_f'=>$nueva_f , 'n' => $n , 'f' => $f])->render()
+      ]);
 
-      return $m;
+
 
     }
 
