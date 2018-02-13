@@ -2,6 +2,8 @@
 
 <p>La aplicacion esta hecha con el framework Laravel 5.5 (Versión de PHP 7.2) , jQuery y jQuery UI. 
 Previamente se debe tener instalado Composer y Laravel.</p>
+ * Guia para instalar Composer y Laravel: https://styde.net/instalacion-de-composer-y-laravel/
+
 <h3>#Instrucciones</h3>
 
 <ul> 
