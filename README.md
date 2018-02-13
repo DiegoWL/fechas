@@ -9,7 +9,7 @@ Previamente se debe tener instalado Composer y Laravel.</p>
 <ul> 
 	<li>1.- Descargar la aplicación.</li>
 	<li>2.- Dentro de la carpeta descargada, escribir el comando 'composer install' el cual instalara todas las dependencias ocupadas en la 					aplicacion.</li>
-	<li>3.- Una vez terminada la ejecucion del comando, iniciar la aplicacion con el comando 'php artisan serve'</li>
+	<li>3.- Para iniciar la aplicacion se debe abrir una terminal dentro del directorio de la aplicacion y escribir el comando 'php artisan serve'</li>
 </ul>
 
 
