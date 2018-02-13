@@ -24,9 +24,9 @@
           <h1 class="display-4">Instrucciones Calculo de fechas </h1>
           <ul>
             <li> Validar que cada fecha sea mayor al anterior.</li>
-            <li>Una vez valiada las fechas, se desbloquearan los botones para realizar el calculo.</li>
-            <li>Ingresar un número y apretar el boton calcular</li>
-            <li>Se desplegará una ventana con el resultado</li>
+            <li> Una vez valiada las fechas, se desbloquearan los botones para realizar el calculo.</li>
+            <li> Ingresar un número y apretar el boton calcular</li>
+            <li> Se desplegará una ventana con el resultado</li>
            </ul>
         </div>
       </div>
